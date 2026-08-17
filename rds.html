@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon RDS – CloudJourney</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>CloudJourney</h1>
+  <p class="tagline">Min personliga resa genom AWS-tjänster</p>
+  <nav>
+    <a href="index.html">Startsida</a>
+    <a href="s3.html">S3</a>
+    <a href="ec2.html">EC2</a>
+    <a href="lambda.html">Lambda</a>
+    <a href="rds.html" aria-current="page">RDS</a>
+    <a href="cloudfront.html">CloudFront</a>
+    <a href="iam.html">IAM</a>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <svg class="service-icon service-icon--database" viewBox="0 0 48 48" role="img" aria-label="Amazon RDS ikon">
+      <circle cx="24" cy="24" r="22"></circle>
+      <text x="24" y="29" text-anchor="middle">RDS</text>
+    </svg>
+    <h2>Amazon RDS</h2>
+    <p class="category">Kategori: Databas</p>
+    <p>Amazon Relational Database Service (RDS) hanterar en relationell
+    databas åt dig — t.ex. PostgreSQL, MySQL eller SQL Server — och sköter
+    saker som patchning, backuper och failover automatiskt istället för
+    att du själv administrerar databasservern.</p>
+    <p>RDS stöder Multi-AZ-driftsättning för hög tillgänglighet (en
+    stående kopia i en annan datacenterzon som tar över vid fel) och
+    read-replicas för att skala läsbelastning separat från
+    skrivbelastning.</p>
+  </article>
+
+  <aside>
+    <h2>Bra att veta</h2>
+    <ul>
+      <li>Automatiska backuper med point-in-time-återställning.</li>
+      <li>Flera databasmotorer att välja mellan i samma tjänst.</li>
+      <li>Skalning av lagring och beräkningskraft utan att byta motor.</li>
+    </ul>
+  </aside>
+
+  <section class="self-assessment">
+    <h2>Din självskattning</h2>
+    <form id="rating-form" novalidate>
+      <fieldset>
+        <legend>Hur säker känner du dig på denna tjänst?</legend>
+        <label><input type="radio" name="rating" value="1" required> 1 – Nybörjare</label>
+        <label><input type="radio" name="rating" value="2"> 2</label>
+        <label><input type="radio" name="rating" value="3"> 3</label>
+        <label><input type="radio" name="rating" value="4"> 4</label>
+        <label><input type="radio" name="rating" value="5"> 5 – Trygg</label>
+      </fieldset>
+
+      <label for="note">Anteckning (minst 15 tecken)</label>
+      <textarea id="note" name="note" minlength="15" required
+        placeholder="Vad har du lärt dig om RDS hittills?"></textarea>
+
+      <p class="error-message" id="rating-error" role="alert" hidden></p>
+
+      <button type="submit">Spara skattning</button>
+    </form>
+    <div id="form-result" class="form-result" hidden aria-live="polite"></div>
+  </section>
+</main>
+
+<footer>
+  <p>CloudJourney — ett personligt lärprojekt om AWS. Senast uppdaterad 2026.</p>
+</footer>
+
+<script src="js/form.js"></script>
+</body>
+</html>

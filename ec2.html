@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon EC2 – CloudJourney</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>CloudJourney</h1>
+  <p class="tagline">Min personliga resa genom AWS-tjänster</p>
+  <nav>
+    <a href="index.html">Startsida</a>
+    <a href="s3.html">S3</a>
+    <a href="ec2.html" aria-current="page">EC2</a>
+    <a href="lambda.html">Lambda</a>
+    <a href="rds.html">RDS</a>
+    <a href="cloudfront.html">CloudFront</a>
+    <a href="iam.html">IAM</a>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <svg class="service-icon service-icon--compute" viewBox="0 0 48 48" role="img" aria-label="Amazon EC2 ikon">
+      <circle cx="24" cy="24" r="22"></circle>
+      <text x="24" y="29" text-anchor="middle">EC2</text>
+    </svg>
+    <h2>Amazon EC2</h2>
+    <p class="category">Kategori: Beräkning</p>
+    <p>Amazon Elastic Compute Cloud (EC2) ger skalbar beräkningskraft i
+    molnet i form av virtuella servrar, kallade instanser. Du väljer
+    operativsystem, CPU/minne-storlek (instanstyp) och kan starta, stoppa
+    eller skala antalet instanser efter behov istället för att äga fysisk
+    hårdvara.</p>
+    <p>EC2 är grunden för många andra AWS-tjänster och passar för allt
+    från webbservrar och API:er till batch-bearbetning och
+    utvecklingsmiljöer. Auto Scaling kan lägga till eller ta bort
+    instanser automatiskt utifrån belastning.</p>
+  </article>
+
+  <aside>
+    <h2>Bra att veta</h2>
+    <ul>
+      <li>Betalning sker per sekund/timme instansen körs.</li>
+      <li>Instanstyper är optimerade för olika behov (allmän, minne, GPU m.fl).</li>
+      <li>Kan kombineras med Elastic Load Balancing för att fördela trafik.</li>
+    </ul>
+  </aside>
+
+  <section class="self-assessment">
+    <h2>Din självskattning</h2>
+    <form id="rating-form" novalidate>
+      <fieldset>
+        <legend>Hur säker känner du dig på denna tjänst?</legend>
+        <label><input type="radio" name="rating" value="1" required> 1 – Nybörjare</label>
+        <label><input type="radio" name="rating" value="2"> 2</label>
+        <label><input type="radio" name="rating" value="3"> 3</label>
+        <label><input type="radio" name="rating" value="4"> 4</label>
+        <label><input type="radio" name="rating" value="5"> 5 – Trygg</label>
+      </fieldset>
+
+      <label for="note">Anteckning (minst 15 tecken)</label>
+      <textarea id="note" name="note" minlength="15" required
+        placeholder="Vad har du lärt dig om EC2 hittills?"></textarea>
+
+      <p class="error-message" id="rating-error" role="alert" hidden></p>
+
+      <button type="submit">Spara skattning</button>
+    </form>
+    <div id="form-result" class="form-result" hidden aria-live="polite"></div>
+  </section>
+</main>
+
+<footer>
+  <p>CloudJourney — ett personligt lärprojekt om AWS. Senast uppdaterad 2026.</p>
+</footer>
+
+<script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS Lambda – CloudJourney</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>CloudJourney</h1>
+  <p class="tagline">Min personliga resa genom AWS-tjänster</p>
+  <nav>
+    <a href="index.html">Startsida</a>
+    <a href="s3.html">S3</a>
+    <a href="ec2.html">EC2</a>
+    <a href="lambda.html" aria-current="page">Lambda</a>
+    <a href="rds.html">RDS</a>
+    <a href="cloudfront.html">CloudFront</a>
+    <a href="iam.html">IAM</a>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <svg class="service-icon service-icon--compute" viewBox="0 0 48 48" role="img" aria-label="AWS Lambda ikon">
+      <circle cx="24" cy="24" r="22"></circle>
+      <text x="24" y="29" text-anchor="middle">λ</text>
+    </svg>
+    <h2>AWS Lambda</h2>
+    <p class="category">Kategori: Beräkning (serverlös)</p>
+    <p>AWS Lambda kör kod utan att du behöver hantera servrar. Du laddar
+    upp en funktion, definierar vad som ska trigga den (t.ex. en
+    filuppladdning till S3, ett API-anrop eller ett schemalagt event), och
+    AWS sköter allt om exekveringsmiljön automatiskt.</p>
+    <p>Du betalar bara för den faktiska körtiden, ner till millisekunder,
+    och funktionen skalas automatiskt från noll till tusentals
+    parallella körningar. Passar bra för händelsestyrd bearbetning, API:er
+    och att koppla ihop andra AWS-tjänster.</p>
+  </article>
+
+  <aside>
+    <h2>Bra att veta</h2>
+    <ul>
+      <li>Ingen kostnad när funktionen inte körs ("scale to zero").</li>
+      <li>Maximal körtid per anrop är 15 minuter.</li>
+      <li>Stöder flera språk, t.ex. Node.js, Python, Java och .NET.</li>
+    </ul>
+  </aside>
+
+  <section class="self-assessment">
+    <h2>Din självskattning</h2>
+    <form id="rating-form" novalidate>
+      <fieldset>
+        <legend>Hur säker känner du dig på denna tjänst?</legend>
+        <label><input type="radio" name="rating" value="1" required> 1 – Nybörjare</label>
+        <label><input type="radio" name="rating" value="2"> 2</label>
+        <label><input type="radio" name="rating" value="3"> 3</label>
+        <label><input type="radio" name="rating" value="4"> 4</label>
+        <label><input type="radio" name="rating" value="5"> 5 – Trygg</label>
+      </fieldset>
+
+      <label for="note">Anteckning (minst 15 tecken)</label>
+      <textarea id="note" name="note" minlength="15" required
+        placeholder="Vad har du lärt dig om Lambda hittills?"></textarea>
+
+      <p class="error-message" id="rating-error" role="alert" hidden></p>
+
+      <button type="submit">Spara skattning</button>
+    </form>
+    <div id="form-result" class="form-result" hidden aria-live="polite"></div>
+  </section>
+</main>
+
+<footer>
+  <p>CloudJourney — ett personligt lärprojekt om AWS. Senast uppdaterad 2026.</p>
+</footer>
+
+<script src="js/form.js"></script>
+</body>
+</html>

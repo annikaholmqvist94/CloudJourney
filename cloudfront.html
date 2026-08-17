@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon CloudFront – CloudJourney</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>CloudJourney</h1>
+  <p class="tagline">Min personliga resa genom AWS-tjänster</p>
+  <nav>
+    <a href="index.html">Startsida</a>
+    <a href="s3.html">S3</a>
+    <a href="ec2.html">EC2</a>
+    <a href="lambda.html">Lambda</a>
+    <a href="rds.html">RDS</a>
+    <a href="cloudfront.html" aria-current="page">CloudFront</a>
+    <a href="iam.html">IAM</a>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <svg class="service-icon service-icon--network" viewBox="0 0 48 48" role="img" aria-label="Amazon CloudFront ikon">
+      <circle cx="24" cy="24" r="22"></circle>
+      <text x="24" y="29" text-anchor="middle">CF</text>
+    </svg>
+    <h2>Amazon CloudFront</h2>
+    <p class="category">Kategori: Nätverk/CDN</p>
+    <p>Amazon CloudFront är ett globalt innehållsleveransnätverk (CDN) som
+    cachelagrar innehåll — bilder, video, HTML, API-svar — nära
+    besökaren, i över hundra platser världen över, för att minska
+    laddtider och avlasta ursprungsservern.</p>
+    <p>CloudFront kombineras ofta med S3 (för statiska filer) eller ett
+    eget ursprung, och kan även fungera som ett skydd mot vissa typer av
+    attacker genom integration med AWS Shield och WAF.</p>
+  </article>
+
+  <aside>
+    <h2>Bra att veta</h2>
+    <ul>
+      <li>Cachar innehåll geografiskt nära besökaren via edge-platser.</li>
+      <li>Stöder HTTPS och anpassade domännamn/certifikat.</li>
+      <li>Kan cacha både statiskt och visst dynamiskt innehåll.</li>
+    </ul>
+  </aside>
+
+  <section class="self-assessment">
+    <h2>Din självskattning</h2>
+    <form id="rating-form" novalidate>
+      <fieldset>
+        <legend>Hur säker känner du dig på denna tjänst?</legend>
+        <label><input type="radio" name="rating" value="1" required> 1 – Nybörjare</label>
+        <label><input type="radio" name="rating" value="2"> 2</label>
+        <label><input type="radio" name="rating" value="3"> 3</label>
+        <label><input type="radio" name="rating" value="4"> 4</label>
+        <label><input type="radio" name="rating" value="5"> 5 – Trygg</label>
+      </fieldset>
+
+      <label for="note">Anteckning (minst 15 tecken)</label>
+      <textarea id="note" name="note" minlength="15" required
+        placeholder="Vad har du lärt dig om CloudFront hittills?"></textarea>
+
+      <p class="error-message" id="rating-error" role="alert" hidden></p>
+
+      <button type="submit">Spara skattning</button>
+    </form>
+    <div id="form-result" class="form-result" hidden aria-live="polite"></div>
+  </section>
+</main>
+
+<footer>
+  <p>CloudJourney — ett personligt lärprojekt om AWS. Senast uppdaterad 2026.</p>
+</footer>
+
+<script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS IAM – CloudJourney</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>CloudJourney</h1>
+  <p class="tagline">Min personliga resa genom AWS-tjänster</p>
+  <nav>
+    <a href="index.html">Startsida</a>
+    <a href="s3.html">S3</a>
+    <a href="ec2.html">EC2</a>
+    <a href="lambda.html">Lambda</a>
+    <a href="rds.html">RDS</a>
+    <a href="cloudfront.html">CloudFront</a>
+    <a href="iam.html" aria-current="page">IAM</a>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <svg class="service-icon service-icon--security" viewBox="0 0 48 48" role="img" aria-label="AWS IAM ikon">
+      <circle cx="24" cy="24" r="22"></circle>
+      <text x="24" y="29" text-anchor="middle">IAM</text>
+    </svg>
+    <h2>AWS IAM</h2>
+    <p class="category">Kategori: Säkerhet</p>
+    <p>AWS Identity and Access Management (IAM) styr vem (användare,
+    grupp eller tjänst) som får göra vad i ett AWS-konto. Via policies
+    (JSON-dokument som beskriver tillåtna/otillåtna handlingar) kopplas
+    exakta rättigheter till specifika resurser.</p>
+    <p>Grundprincipen är minsta möjliga behörighet ("least privilege") —
+    ge bara den åtkomst som faktiskt behövs. IAM-roller gör det möjligt
+    för t.ex. en EC2-instans eller Lambda-funktion att få tillfälliga
+    behörigheter utan hårdkodade nycklar.</p>
+  </article>
+
+  <aside>
+    <h2>Bra att veta</h2>
+    <ul>
+      <li>Kostar inget extra att använda — ingår i alla AWS-konton.</li>
+      <li>Stöder multi-faktor-autentisering (MFA) för extra säkerhet.</li>
+      <li>Roller är säkrare än delade nycklar mellan tjänster.</li>
+    </ul>
+  </aside>
+
+  <section class="self-assessment">
+    <h2>Din självskattning</h2>
+    <form id="rating-form" novalidate>
+      <fieldset>
+        <legend>Hur säker känner du dig på denna tjänst?</legend>
+        <label><input type="radio" name="rating" value="1" required> 1 – Nybörjare</label>
+        <label><input type="radio" name="rating" value="2"> 2</label>
+        <label><input type="radio" name="rating" value="3"> 3</label>
+        <label><input type="radio" name="rating" value="4"> 4</label>
+        <label><input type="radio" name="rating" value="5"> 5 – Trygg</label>
+      </fieldset>
+
+      <label for="note">Anteckning (minst 15 tecken)</label>
+      <textarea id="note" name="note" minlength="15" required
+        placeholder="Vad har du lärt dig om IAM hittills?"></textarea>
+
+      <p class="error-message" id="rating-error" role="alert" hidden></p>
+
+      <button type="submit">Spara skattning</button>
+    </form>
+    <div id="form-result" class="form-result" hidden aria-live="polite"></div>
+  </section>
+</main>
+
+<footer>
+  <p>CloudJourney — ett personligt lärprojekt om AWS. Senast uppdaterad 2026.</p>
+</footer>
+
+<script src="js/form.js"></script>
+</body>
+</html>
