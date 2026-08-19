@@ -1,0 +1,109 @@
+/* --- Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img, svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* --- Design tokens --- */
+:root {
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F2F4F8;
+  --color-text: #1B2430;
+  --color-text-muted: #4B5563;
+  --color-surface-dark: #101B2D;
+  --color-text-on-dark: #F5F7FA;
+  --color-accent: #C97A22;
+  --color-accent-dark: #8C5716;
+  --color-text-on-accent: #1B2430;
+  --color-border: #D8DEE9;
+
+  --color-storage: #2E7D6B;
+  --color-compute: #C97A22;
+  --color-database: #4C5B93;
+  --color-network: #A13D63;
+  --color-security: #6B4C93;
+
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --radius: 0.5rem;
+}
+
+/* --- Base typography --- */
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  margin-bottom: var(--space-2);
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+
+p { margin-bottom: var(--space-2); }
+
+a {
+  color: var(--color-accent-dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* --- Header / Footer --- */
+header, footer {
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  padding: var(--space-2) var(--space-3);
+}
+
+header h1 { color: var(--color-text-on-dark); margin-bottom: 0; }
+
+header .tagline {
+  color: var(--color-text-on-dark);
+  opacity: 0.85;
+  margin-bottom: var(--space-2);
+}
+
+nav a {
+  color: var(--color-text-on-dark);
+  text-decoration: none;
+  margin-right: var(--space-2);
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+nav a[aria-current="page"] {
+  border-bottom-color: var(--color-accent);
+}
+
+footer {
+  margin-top: var(--space-4);
+  font-size: 0.9rem;
+}
+
+main {
+  padding: var(--space-3);
+  max-width: 960px;
+  margin: 0 auto;
+}
