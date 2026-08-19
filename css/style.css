@@ -16,18 +16,20 @@ img, svg {
   --color-bg-alt: #F2F4F8;
   --color-text: #1B2430;
   --color-text-muted: #4B5563;
-  --color-surface-dark: #101B2D;
+  --color-surface-dark: #2D4D48;
   --color-text-on-dark: #F5F7FA;
-  --color-accent: #C97A22;
-  --color-accent-dark: #8C5716;
+  --color-accent: #7BD4C8;
+  --color-accent-dark: #61A79E;
   --color-text-on-accent: #1B2430;
+  --color-focus: #4B827B;
+  --color-focus-on-dark: #7BD4C8;
   --color-border: #D8DEE9;
 
-  --color-storage: #2E7D6B;
-  --color-compute: #C97A22;
-  --color-database: #4C5B93;
-  --color-network: #A13D63;
-  --color-security: #6B4C93;
+  --color-storage: #92FCEE;
+  --color-compute: #7BD4C8;
+  --color-database: #4B827B;
+  --color-network: #61A79E;
+  --color-security: #2D4D48;
 
   --font-heading: Georgia, 'Times New Roman', serif;
   --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -59,14 +61,19 @@ h2 { font-size: 1.5rem; }
 p { margin-bottom: var(--space-2); }
 
 a {
-  color: var(--color-accent-dark);
+  color: var(--color-surface-dark);
 }
 
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid var(--color-accent);
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+nav a:focus-visible {
+  outline: 3px solid var(--color-focus-on-dark);
   outline-offset: 2px;
 }
 
@@ -106,4 +113,133 @@ main {
   padding: var(--space-3);
   max-width: 960px;
   margin: 0 auto;
+}
+
+/* --- Nav layout --- */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-2);
+}
+
+/* --- Service list grid (homepage) --- */
+#service-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.service-card {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-2);
+}
+
+.service-card-link {
+  color: var(--color-text);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.service-card .category {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* --- Service icon (inline SVG badge) --- */
+.service-icon {
+  width: 56px;
+  height: 56px;
+}
+
+.service-icon circle { fill: var(--color-text-muted); }
+.service-icon text {
+  fill: var(--color-text-on-dark);
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.service-icon--storage circle { fill: var(--color-storage); }
+.service-icon--storage text { fill: var(--color-text); }
+
+.service-icon--compute circle { fill: var(--color-compute); }
+.service-icon--compute text { fill: var(--color-text); }
+
+.service-icon--database circle { fill: var(--color-database); }
+
+.service-icon--network circle { fill: var(--color-network); }
+.service-icon--network text { fill: var(--color-text); }
+
+.service-icon--security circle { fill: var(--color-security); }
+
+/* --- Detail page layout --- */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+article, aside, .self-assessment {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+
+/* --- Self-assessment form --- */
+.self-assessment fieldset {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.self-assessment legend {
+  font-weight: bold;
+  margin-bottom: var(--space-1);
+  width: 100%;
+}
+
+.self-assessment textarea {
+  width: 100%;
+  min-height: 6rem;
+  padding: var(--space-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  margin: var(--space-1) 0 var(--space-2);
+}
+
+.self-assessment button {
+  background-color: var(--color-accent);
+  color: var(--color-text-on-accent);
+  border: none;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.self-assessment button:hover {
+  background-color: var(--color-accent-dark);
+  color: var(--color-text-on-accent);
+}
+
+.error-message {
+  color: #8A1F1F;
+  font-weight: bold;
+  margin-bottom: var(--space-2);
+}
+
+.form-result {
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  padding: var(--space-2);
+  border-radius: var(--radius);
+  margin-top: var(--space-2);
 }
