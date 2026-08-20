@@ -243,3 +243,25 @@ article, aside, .self-assessment {
   border-radius: var(--radius);
   margin-top: var(--space-2);
 }
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  #service-list {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  main {
+    padding: var(--space-2);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  #service-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
