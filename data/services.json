@@ -1,0 +1,50 @@
+[
+  {
+    "id": "s3",
+    "name": "Amazon S3",
+    "category": "Lagring",
+    "categoryClass": "storage",
+    "shortDescription": "Skalbar objektlagring för filer, backuper och statiska webbplatser.",
+    "iconLetter": "S3"
+  },
+  {
+    "id": "ec2",
+    "name": "Amazon EC2",
+    "category": "Beräkning",
+    "categoryClass": "compute",
+    "shortDescription": "Virtuella servrar i molnet som du kan starta, stoppa och skala efter behov.",
+    "iconLetter": "EC2"
+  },
+  {
+    "id": "lambda",
+    "name": "AWS Lambda",
+    "category": "Beräkning (serverlös)",
+    "categoryClass": "compute",
+    "shortDescription": "Kör kod utan att hantera servrar — betala bara för faktisk körtid.",
+    "iconLetter": "λ"
+  },
+  {
+    "id": "rds",
+    "name": "Amazon RDS",
+    "category": "Databas",
+    "categoryClass": "database",
+    "shortDescription": "Hanterad relationsdatabas med automatiska backuper och failover.",
+    "iconLetter": "RDS"
+  },
+  {
+    "id": "cloudfront",
+    "name": "Amazon CloudFront",
+    "category": "Nätverk/CDN",
+    "categoryClass": "network",
+    "shortDescription": "Globalt CDN som cachelagrar innehåll nära besökaren för snabbare laddning.",
+    "iconLetter": "CF"
+  },
+  {
+    "id": "iam",
+    "name": "AWS IAM",
+    "category": "Säkerhet",
+    "categoryClass": "security",
+    "shortDescription": "Styr vem som får göra vad i ett AWS-konto via policies och roller.",
+    "iconLetter": "IAM"
+  }
+]
